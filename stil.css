@@ -1047,7 +1047,7 @@ form
 	padding-left: 90px;
 }
 
-input[type="email"],input[type="password"]{
+input[type="text"],input[type="text"]{
   width:92%;
   background:#fff;
   margin-bottom:4%;
