@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8">
 		<title>KOMOCHEM d.o.o. Visoko</title>
-		<link rel="stylesheet" type="text/css" href="stil.css">
+		<link rel="stylesheet" type="text/css" href="stilTest.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ek+Mukta">
 	</head>
 
@@ -24,13 +24,15 @@
 			<!--CONTAINER-->
 			<div class = "container">
 				<!--meni glavni-->
-				
+				<div class = "slikaLjepila">
+					<img src="ljepilaslika.png" alt = "" height = "100%" width = "100%">
+				</div>
 				<div class = "nav2">
 					<div class = "menu">
 						<ul class = "clearfix">
-							<li>
-								<a href="#" class = "nav-item">Proizvodi<span class = "arrow">&#9660;</span></a>
-									<ul class = "sub-menu">
+							<li id = "proizv">
+								<a href="#" class = "nav-item" onclick = "OtvoriMeni('submen')">Proizvodi<span id = "strelica" class = "arrow">&#9660;</span></a>
+									<ul class = "sub-menu" id = "submen" onmouseover = "DrziOtvoreno()"    onmouseout  = "ZatvoriMeni()">
 										<li class = "ljepila"><a href="ljepila.html">Ljepila</a></li>
 										<li class = "bojeunutra"><a href="bojeunutra.html">Boje za unutrašnje zidove</a></li>
 										<li class = "fasade"><a href="fasade.html">Fasade</a></li>
@@ -44,7 +46,8 @@
 							<li><a href="savjeti.html">Savjeti</a></li>
 							<li><a href="reference.html">Reference</a></li>
 							<li><a href="download.html">Download centar</a></li>
-							<li><a href="prijatelj.html">Postanite prijatelj</a></li>
+							<!--<li><a href="#">Postanite prijatelj</a></li>-->
+							<li><a href = "prijateljtTest.html">Postanite prijatelj</a></li>
 						</ul>
 					</div>
 				</div>
@@ -75,9 +78,7 @@
 					</a>
 				</div>
 
-				<div class = "slikaLjepila">
-					<img src="ljepilaslika.png" alt = "" height = "100%" width = "100%">
-				</div>
+				
 				<!--PROIZVODI-->
 				<div class = "okvirLjepila">
 
@@ -106,6 +107,25 @@
 
 		 <!--END OF okvir-->	
 		</div>
+		<script src = "javaSkript.js">
+		
+		
+		/*function ZatvoriMeni()
+		{
+			Timer = window.setTimeout(Zatvori, 5000);
+		}
+
+		function Zatvori()
+		{
+			Meni.style.visibility = "hidden";
+		}
+
+		function DrziOtvoren()
+		{
+			window.clearTimeout(Timer);
+		}*/
+		</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	</body>
 
 </html>

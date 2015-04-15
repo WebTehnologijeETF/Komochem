@@ -5,7 +5,6 @@
 		<title>KOMOCHEM d.o.o. Visoko</title>
 		<link rel="stylesheet" type="text/css" href="stilTest.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ek+Mukta">
-		<link href='http://fonts.googleapis.com/css?family=Hind:600' rel='stylesheet' type='text/css'>
 	</head>
 
 	<body>
@@ -20,12 +19,14 @@
 				</ul>
 			</div>
 			<!--END OF meni_gore-->
-			
 			<div class = "zuta"></div>
 			<div class = "crna"></div>
 			<!--CONTAINER-->
 			<div class = "container">
 				<!--meni glavni-->
+				<div id = "slikaLogin">
+					<img src="loginPhoto.jpg" alt = "" height = "100%" width = "100%">
+				</div>
 				
 				<div class = "nav2">
 					<div class = "menu">
@@ -33,7 +34,7 @@
 							<li id = "proizv">
 								<a href="#" class = "nav-item" onclick = "OtvoriMeni('submen')">Proizvodi<span id = "strelica" class = "arrow">&#9660;</span></a>
 									<ul class = "sub-menu" id = "submen" onmouseover = "DrziOtvoreno()"    onmouseout  = "ZatvoriMeni()">
-										<li class = "ljepila"><a href="ljepila.html">Ljepila</a></li>
+										<li class = "ljepila" onclick = "aa();return false;"><a href="ljepila.html">Ljepila</a></li>
 										<li class = "bojeunutra"><a href="bojeunutra.html">Boje za unutrašnje zidove</a></li>
 										<li class = "fasade"><a href="fasade.html">Fasade</a></li>
 										<li class = "bojefasade"><a href="bojefasade.html">Boje za fasade</a></li>
@@ -51,19 +52,54 @@
 						</ul>
 					</div>
 				</div>
+
 				
-			
-				<!--END OF meni glavni-->
+					<div id = "login">
+						<h4>Log in</h4>
+					</div>
+					<form name = "forma" id = "forma">
+
+						Ime : <input type = "text" name = "fname" id = "fname">
+						<div title = "Morate unijeti ime" id = "errorName"><img src="error.png"></div> 
+						<label id = "tip">Tip pretplate</label>
+						<select id = "tipP">
+							<option id = "mala"value = "mala">Mala</option>
+							<option id = "srednja"value = "srednja">Srednja</option>
+							<option id = "velika" value = "velika">Velika</option>
+						</select>
+						<label id = "brMjesL">BrojMjeseci : </label>
+						<input type = "text" name = "brMjes" id = "brMjes">
+						<div title = "" id = "errorBrMjes"><img src="error.png"></div> 
+						<br>
+
+						Prezime : <input type = "text" name = "lname" id = "lname">
+						<div title = "Morate unijeti prezime" id = "errorSurname"><img src="error.png"></div> <br>
+
+						Email : <input type = "text" name = "em" id = "em">
+						<div title = "Neispravan format mail-a" id = "errorEmail"><img src="error.png"></div> <br> 
+
+						Password : <input type = "password" name = "pass" id = "pass">
+						<div title = "Morate unijeti password" id = "errorPass"><img src="error.png"></div> <br>
+
+						Adresa : <input type = "text" name = "add" id = "add">
+						<div id = "errorAdd"><img src="error.png"></div><br>
+
+						Telefon : <input type = "text" name = "tel" id  ="tel">
+						<div title = "Pogresan format " id = "errorTel"><img src="error.png"></div>
+
+						<input id = "dugmic"type = "submit" value = "Submit" onclick = "return ValidirajFormu();">
+					</form>
+					
+				
+				<!--END OF meni glavni-->	
 				<!--<div class = "pics">heheh</div>-->
 				<!--<div>aaaa</div>
 				<div class = "pp">aaaa</div>
 				<div>bbbb</div>-->
-				
 				<div class = "logo"> 
 					<img src = "logobez2.png" alt = "">
 				</div>
-				<div class = "nn">NOVOSTI</div>
-				<!--IKONE-->
+
 				<div class = "facebook">
 					<a href="https://www.facebook.com">
 						<img src="fejs.png" alt = "">
@@ -81,90 +117,6 @@
 						<img src="gugl.png" alt = "">
 					</a>
 				</div>
-				<!--END OF IKONE-->
-				<div class = "photos">
-					<img src="imgPoc.jpg" alt = "" width = "100%" height = "100%">
-				</div>
-
-				<div class = "referenceNaslov">Reference</div>
-
-
-				<!--NOVOSTI-->
-
-				<!--Dodavanje novosit po šablonu : 
-
-				<div class = "podnovosti" id = "n2">
-						<h5>NASLOV</h5>
-						<p>
-							TEXT <a href="#">opširnije...</a>
-						</p>
-						<p class = "ko">
-							DATUM;VRIJEME;VLASNIK
-						</p>
-				</div>
-				-->
-				<div class = "novosti">
-					<div class = "podnovosti" id = "n1">
-						<h5>Novo u ponudi</h5>
-						<p>
-							Komolazur <a href="#">opširnije...</a>
-						</p>
-						<p class = "ko">
-							29.03.2015;22:10;F.O.
-						</p>
-					</div>
-
-					<div class = "podnovosti" id = "n2">
-						<h5>Novo u ponudi</h5>
-						<p>
-							Komolux <a href="#">opširnije...</a>
-						</p>
-						<p class = "ko">
-							29.03.2015;22:10;F.O.
-						</p>
-					</div>
-
-					<div class = "podnovosti" id = "n3">
-						<h5>Novo u ponudi</h5>
-						<p>
-							Komokor <a href="#">opširnije...</a>
-						</p>
-						<p class = "ko">
-							29.03.2015;22:10;F.O.
-						</p>
-					</div>
-
-					<div class = "podnovosti" id = "n4">
-						Nešto
-					</div>
-				</div>
-
-				<div class = "reference">	
-					<img src="bemust.jpg" alt = "" width = "100%" height = "100%">
-					<div class = "refref">
-						<p>Pogledajte gradilišta na kojima</p>
-						<p class = "more">je KOMOCHEM&nbsp;<a href="reference.html">Opšrinije...</a></p>
-					</div>
-				</div>
-				<div class = "downloadsNaslov">Downloads</div>
-				<div class ="downloads">
-					<img src="downmanja.png" alt = "" width = "100%" height = "100%">
-					<div class = "refref">
-						<p>Download specifikacija</p>
-						<p class = "more">svih proizvoda &nbsp;<a href="download.html">Opširnije...</a></p>
-					</div>
-				</div>
-				
-				<div class = "kalkulator">
-					<img src="kalk.jpg" alt = "" width = "100%" height = "100%">
-					<div class = "refref">
-						<p>Izračunajte konačnu cijenu</p>
-						<p class = "more"> na osnovu <a href="kalkulator.html">Opširnije...</a></p>
-					</div>
-				</div>
-				<div class = "kalkNaslov">Kalkulator</div>
-
-
 
 			</div>
 			<!--END OF CONTAINER-->
@@ -172,7 +124,7 @@
 		 <!--END OF okvir-->	
 		</div>
 
-		<script src = "javaSkript.js">
+			<script src = "javaSkript.js">
 		
 		
 		/*function ZatvoriMeni()
@@ -191,6 +143,7 @@
 		}*/
 		</script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		
 	</body>
 
 </html>
