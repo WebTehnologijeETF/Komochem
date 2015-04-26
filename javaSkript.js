@@ -223,5 +223,233 @@ function ValidirajFormu()
 
 }
 
+function ajaxPocetna()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+		}
+	}
+	ajax.open("GET", "ajaxPocetna.html", true);
+	ajax.send();
+}
 
 
+function ajaxOnama()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+		}
+	}
+	ajax.open("GET", "ajaxO_nama.html", true);
+	ajax.send();;
+}
+
+function ajaxKontakt()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+		}
+	}
+	ajax.open("GET", "ajaxKontakt.html", true);
+	ajax.send();;
+}
+
+function ajaxLjepila()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajakLjepila.html", true);
+	ajax.send();;
+}
+
+function ajaxBojeUn()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxBojeUnutra.html", true);
+	ajax.send();;
+}
+
+function ajaxBojeFas()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxBojeFasade.html", true);
+	ajax.send();;
+}
+
+function ajaxStir()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxStiropor.html", true);
+	ajax.send();;
+}
+
+function ajaxFas()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxFasade.html", true);
+	ajax.send();;
+}
+
+function ajaxDrvoMetal()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxBojeMetal.html", true);
+	ajax.send();;
+}
+
+function ajaxPodloge()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxPodloge.html", true);
+	ajax.send();;
+}
+
+function ajaxOstale()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxOstale.html", true);
+	ajax.send();
+}
+
+
+function ajaxSavjet()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxSavjeti.html", true);
+
+	ajax.send();
+}
+
+function ajaxRef()
+{
+
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxR.html", true);
+
+	ajax.send();
+}
+
+function ajaxDown()
+{
+
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxDownload.html", true);
+
+	ajax.send();
+}
+
+function ajaxPrij()
+{
+
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+		}
+	}
+	ajax.open("GET", "ajaxPrijatelj.html", true);
+
+	ajax.send();
+}

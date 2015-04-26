@@ -1,0 +1,34 @@
+<!DOCTYPE HTML SYSTEM>
+<html>
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8">
+		<title>KOMOCHEM d.o.o. Visoko</title>
+		<link rel="stylesheet" type="text/css" href="stilTest.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ek+Mukta">
+	</head>
+
+	<body>
+
+					<!--PROIZVODI-->
+					<div class = "slikaLjepila" id = "slikaLjepila">
+							<img src="ljepilaslika.png" alt = "" height = "100%" width = "100%">
+					</div>
+					<div class = "okvirLjepila">
+						<div class = "proizvod" id = "viscolls">
+							<h4>KOMOFRONT</h4>
+							<p>
+								KOMOFRONT je premaz za zaštitu čela drvenih elemenata, izrađen na bazi vodenih disperzija, punila i aditiva. Kod brzog sušenja sprječava pucanje drvenih elemenata. Neotrovan je, nezapaljiv, biorazgradiv i ne šteti zdravlju ljudi.<a href="#">Opširnije...</a>
+							</p>
+						</div>
+
+						<div class = "proizvod" id = "viscollair">
+							<h4>VISCOLL-TAP</h4>
+							<p>
+								VISCOLL-TAP je ljepilo za tapete izrađeno iz visokokvalitetne celuloze. Koristi se za lijepljenje svih vrsta tapeta. Lijepi se na svježu i osušenu žbuku. Suhi film ljepila je providan, ne stvara mrlje na tapetama, otporan je na niske temperature i djelovanje mikroorganizama.<a href="#">Opširnije...</a>
+							</p>
+						</div>
+					</div>
+			
+	</body>
+
+</html>
