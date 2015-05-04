@@ -682,7 +682,7 @@ background-image: linear-gradient(to top, #DBDBD3 0%, #FFFFFF 90%);
 {
 	/*position: relative;*/
 	margin-left: 680px;
-	margin-top: -460px;
+	margin-top: -390px;
 	border-style: solid;
 	border-color: yellow;
 	border-width: 1px;
@@ -928,13 +928,13 @@ width: 290px;
 
 .tabela{overflow: scroll }
 
-table, th, td
+/*table, th, td
 {
 	border: 2px solid gray;
 	margin: 10px 10px;
 	margin-left: 50px;
 	margin-top: 90px;
-}
+}*/
 
 th
 {
@@ -962,19 +962,19 @@ background-image: linear-gradient(to top, #F7FF19 0%, #FFFFFF 50%);
 
 }
 
-td
+/*td
 {
 	text-align: center;
 	background-color: #F7FF19;
 
-}
+}*/
 td > a
 {text-decoration: none;}
 
-table
+/*table
 {
 	border-collapse: collapse;
-}
+}*/
 
 .slikereference
 {
@@ -1044,7 +1044,33 @@ table
   
 }
 
-form
+#kontaktF
+{
+
+	background: #B3B3B3;
+	padding: 10px;
+	margin-top : 80px;
+	width: 500px;
+	margin-left: 50px;
+	
+
+}
+
+#formtipPretplate{position:absolute;margin-left: 250px; margin-top: -225px;}
+#tipPretplate{position : absolute;margin-left: 250px; margin-top: -245px;}
+#brojMjeseci{position: absolute;margin-left: 250px;margin-top: -200px;}
+#formbrojMjeseci{position: absolute;margin-left: 250px; margin-top: -180px;}
+#labelOpstina{position: absolute;margin-left: 250px; margin-top: -160px;}
+#formOpcina{position: absolute;margin-left: 250px; margin-top: -140px;}
+#labelMjesto{position: absolute; margin-left: 250px; margin-top: -120px;}
+#formMjesto{position:  absolute; margin-left: 250px; margin-top: -100px;}
+#labelPoruka{position: absolute; margin-top: -80px;}
+#formPoruka{position: absolute; margin-top: -60px;}
+textarea {resize : none;}
+#ime, #prezime, #telefon, #email, #pretplata, #mjeseci, #opstina, #inputMjesto {border-color: red;border-style: solid;border-width: 0px; }
+#kontaktF > div  > img{visibility:  hidden;}
+#sendPoruka{position:  absolute; margin-left: 250px; margin-top: -50px; height: 30px; width : 15px0px;}
+#forma
 {
 	background: #B3B3B3;
 	padding: 10px 10px;
@@ -1059,6 +1085,7 @@ form
 	padding-left: 10px;
 	margin-top: 255px;
 }
+#provjera{position:absolute;left: -240px; top: 490px; width: 160px;}
 
 /*input[type="text"]{
   width:80%;
@@ -1107,14 +1134,14 @@ input[type="submit"]:hover{
 #fname{margin-left: 35px;}
 #lname{margin-left: 10px;}
 #em{margin-left: 25px;}
-#pass{margin-left: 5px;}
+#pass{margin-left: 5px; top: -10px;}
 #add{margin-left: 23px;}
 #tel{margin-left: 20px;}
 #errorBrMjes{position:  absolute; margin-left: 550px; margin-top: 23px; visibility: hidden;}
-#dugmic{width: 150px; margin-left : 380px;position:  absolute; bottom: 100px; height: 50px;}
+#dugmic{width: 150px; margin-left : 380px;position:  absolute; bottom: 50px; height: 50px;}
 #slikaLogin
 {
-	position: absolute;
+	/*position: absolute;*/
 	width: 1019px;
 	height: 150px;
 	margin-left: 0px;
@@ -1192,18 +1219,30 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 {
 	background-color: white;
 }
-
-#ajaxForma
+ #labMjesto{margin-left: 305px;  position:  absolute; }
+ #mjesto{margin-left: 30px; position:  absolute; margin-left: 390px;	}
+#errorPlace {margin-left: 540px; margin-top : 2px; visibility: hidden;}
+#labOpcina{margin-left: 305px; position:  absolute;margin-top: -13px;}
+#opcina{margin-left: 390px; bottom: 130px; position: absolute;}
+#errorRegion{margin-left: 540px; margin-top: 8px; visibility: hidden; margin-top: -10px;}
+#provjera{margin-left: 550px; margin-top: -60px; height: 30px;}
+#naslovTri{margin-left: 10px;}
+.aktivnostiP {display:  inline-block;}
+#dugmePosalji, #prikaziTabelu  {width: 150px; height: 30px; margin-left: 80px;}
+#podaciDiv
 {
-	background: black;
-	
-
+	background-image: -ms-linear-gradient(bottom, #D4D4CC 0%, #FFFFFF 90%);
+	background-image: -moz-linear-gradient(bottom, #D4D4CC 0%, #FFFFFF 90%);
+	background-image: -o-linear-gradient(bottom, #D4D4CC 0%, #FFFFFF 90%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #D4D4CC), color-stop(0.9, #FFFFFF));
+	background-image: -webkit-linear-gradient(bottom, #D4D4CC 0%, #FFFFFF 90%);
+	background-image: linear-gradient(to top, #D4D4CC 0%, #FFFFFF 90%);
+	max-height:  600px;
+	overflow-y : scroll;
+	width: 800px;
+	height: 300px;
+	margin-left: 30px;
 }
-
-
-
-
-
-
+#formaPopuni{margin-left: 30px;}
 
 

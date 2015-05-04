@@ -12,12 +12,71 @@
 		<!--okvir-->
 
 				<!--DIO ZA AJAX, treba izdvojiti-->
-				
-					<div class = "kontaktgdje">Gdje nas pronaći?
-					<div class = "karta"></div>
-				</div>
+				<form id ="kontaktF" name = "kontaktF">
+					<h3 id = "naslovForme">Kontaktirajte nas</h3> <br>
+					Ime : 
+					<div id = "formIme" >
+					<input type = "text" id = "ime" name = "ime" required="required">
+					<img id = "errorProviderIme"src="error.png"></div> <br>
 
-				<div class = "kontakt2">
+					Prezime :
+					<div id = "formPrezime">
+					<input type = "text" id = "prezime" name = "prezime" required="required">
+					<img id = "errorProviderPrezime"src="error.png"> </div> <br>
+
+					Telefon : 
+					<div id = "formTelefon">
+						<input type = "text" id = "telefon" name = "telefon" required="required">
+						<img  id = "errorProviderTelefon" src="error.png">
+					</div> <br>
+
+					Email : 
+					<div id = "formemail">
+						<input type = "text" id = "email" name = "email" required="required">
+						<img  id = "errorProviderEmail" src="error.png">
+					</div> <br>
+
+					<label id = "tipPretplate">Tip pretplate : </label>
+					<div id = "formtipPretplate">
+						<select id = "pretplata" name = "pretplata">
+							<option id = "mala"value = "mala">Mala</option>
+							<option id = "srednja"value = "srednja">Srednja</option>
+							<option id = "velika" value = "velika">Velika</option>
+						</select>
+						<img  id = "errorProviderPretplata" src="error.png">
+					</div> <br>
+
+					<label id = "brojMjeseci">Broj mjeseci : </label>
+					<div id = "formbrojMjeseci">
+						<input type = "text" id = "mjeseci" name = "mjeseci" required="required">
+						<img  id = "errorProviderMjeseci" src="error.png">
+					</div> <br>
+
+					<label id = "labelOpstina">Općina : </label>
+					<div id = "formOpcina">
+						<input type = "text" id = "opstina" name = "opstina" >
+						<img  id = "errorProviderOpcina" src="error.png">
+					</div> <br>
+
+					<label id = "labelMjesto">Mjesto : </label>
+					<div id = "formMjesto">
+						<input type = "text" id = "inputMjesto" name = "inputMjesto" required="required" onclick = "return dizejblaj();">
+						<img  id = "errorProviderMjesto" src="error.png">
+					</div> <br>
+
+					<label id = "labelPoruka">Poruka : </label>
+					<div id = "formPoruka">
+							<textarea rows  = "2" cols = "20">
+							</textarea>
+						<img  id = "errorProviderMjesto" src="error.png">
+					</div> <br>
+
+					<input type = "submit" id = "sendPoruka" onclick = "return ValidirajKontaktFormu(); " value = "Pošalji poruku" disabled = true;>
+
+				</form>
+				<input type = "submit" id = "provjera" name = "provjera" onclick = " provjeriGa(); return false;" value = "Provjeri mjesto i općinu">
+
+				<!--<div class = "kontakt2">
 					
 					<p>KOMOCHEM d.o.o. Visoko
 						<br>
@@ -52,7 +111,7 @@
 						<br>
 						1990470004663129
 					</p>
-				</div>
+				</div>-->
 				
 				<!--KRAJ DIJELA ZA AJAX STO TREBA IZDVOJITI-->
 	</body>

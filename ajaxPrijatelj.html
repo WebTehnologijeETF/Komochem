@@ -12,9 +12,9 @@
 		<div id = "slikaLogin">
 						<img src="loginPhoto.jpg" alt = "" height = "100%" width = "100%">
 					</div>
-					<div id = "login">
+					<!--<div id = "login">
 						<h4>Log in</h4>
-					</div>
+					</div>-->
 
 					<form name = "forma" id = "forma">
 
@@ -26,6 +26,7 @@
 							<option id = "srednja"value = "srednja">Srednja</option>
 							<option id = "velika" value = "velika">Velika</option>
 						</select>
+
 						<label id = "brMjesL">BrojMjeseci : </label>
 						<input type = "text" name = "brMjes" id = "brMjes">
 						<div title = "" id = "errorBrMjes"><img src="error.png"></div> 
@@ -35,10 +36,19 @@
 						<div title = "Morate unijeti prezime" id = "errorSurname"><img src="error.png"></div> <br>
 
 						Email : <input type = "text" name = "em" id = "em">
-						<div title = "Neispravan format mail-a" id = "errorEmail"><img src="error.png"></div> <br> 
+						<div title = "Neispravan format mail-a" id = "errorEmail"><img src="error.png"></div>
+						<label id = "labMjesto">Mjesto : </label>
+						<input type = "text" name = "mjesto" id = "mjesto" > 
+						<div title = "Morate unijeti mjesto" id = "errorPlace"><img src="error.png"></div> 
+						<br> 
 
 						Password : <input type = "password" name = "pass" id = "pass">
-						<div title = "Morate unijeti password" id = "errorPass"><img src="error.png"></div> <br>
+						<div title = "Morate unijeti password" id = "errorPass"><img src="error.png"></div> 
+						<label id = "labOpcina">Opcina : </label>
+						<input type = "text" name = "opcina" id = "opcina">
+						<div title = "Morate unijeti opcinu" id = "errorRegion"><img src="error.png"></div> 
+						<!--<input type = "button" value = "Provjeri" id = "provjera" onclick = "return validirajAjax();">-->
+						<br>
 
 						Adresa : <input type = "text" name = "add" id = "add">
 						<div id = "errorAdd"><img src="error.png"></div><br>

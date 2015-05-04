@@ -9,12 +9,86 @@
 	</head>
 
 	<body>
-		<!--okvir-->
+		<h3 id = "naslovTri" >Dodavanje | Brisanje | Editovanje proizvoda</h3> <br>
+		<p class = "aktivnostiP" id = "aktivnostiP">Aktivnost : </p>
+		<select id = "aktivnosti">
+			<option value = "dodavanje">Dodavanje</option>
+			<option value = "brisanje">Brisanje</option>
+			<option value = "promjena">Promjena</option>
+		</select>
+		<table id = "formaPopuni">
+			<tr>
+				<td>
+					<p class = "aktivnostiP">ID</p>
+				</td>
+				<td>
+					<input type = "text" required = "required" id = "idP">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class = "aktivnostiP">Naziv</p>
+				</td>
+				<td>
+					<input type = "text" required = "required" id = "nazivPr">
+				</td>
+			</tr> <br>
+			<tr>
+				<td>
+					<p class ="aktivnostiP">Opis</p>
+				</td>
+				<td>
+					<input type = "text" required = "required" id = "opisP">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class = "aktivnostiP">Kolicina</p>
+				</td>
+				<td>
+					<input type = "number" min = "0" id = "kolicinaP">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class ="aktivnostiP">Cijena</p>
+				</td>
+				<td>
+					<input type = "number" min = "0" id  = "cijenaP">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class = "aktivnostiP">Dostupnost</p>
+				</td>
+				<td>
+					<input type = "number" min = "0" max = "1" id = "dostupnostP">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<input type = "button" id = "dugmePosalji" onclick = "izvrsiAktivnost();" value = "Pošalji"> <br> <br>
+		<input type = "button" id = "prikaziTabelu" onclick = "foo2();" value = "Prikazi tabelu">
+		<div id = "podaciDiv">
+			<!--<table style = "border-style : solid;">
+				<tr style = "border-style : solid;">
+					<td style = "border-style : solid;"> IME</td>
+					<td style = "border-style : solid;"> SLIKA</td>
+					<td style = "border-style : solid;">OPIS</td>
+				</tr>
+				<tr style = "border-style : solid;">
+					<td style = "border-style : solid;">Prvi</td>
+					<td style = "border-style : solid;"><img src="bemust.jpg"></td>
+					<td style = "border-style : solid;">Zgradaaaaaaaaaaaaaaaaaaaa</td>
+				</tr>
+				<tr style = "border-style : solid;">
+					<td style = "border-style : solid;">Drugi</td>
+					<td style = "border-style : solid;"><img src="r1.jpg"></td>
+					<td style = "border-style : solid;">Kuca</td>
+				</tr>
+			</table>-->
+		</div>
 
-				<!--DIO ZA AJAX, treba izdvojiti-->
-
-				<p>U izradi</p>
-				<!--KRAJ DIJELA ZA AJAX STO TREBA IZDVOJITI-->
 	</body>
 
-</html>
+</html> 
