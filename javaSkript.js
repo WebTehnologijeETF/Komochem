@@ -882,22 +882,22 @@ function foo1() //za prikazivanje tabele
 var proizvodi=[];
 function createTable(pr)
 {
-	var s = " <table id = 'tabela'> ";
-	s += " <tr id = 'firstOne'><td>ID</td><td>NAZIV</td><td>OPIS</td><td>KOLICINA</td>";
-	s += " <td>DOSTUPNOST</td></tr> ";
+	var t = " <table id = 'tabelaAjax'> ";
+	t += " <tr id = 'firstOne'><td>ID</td><td>NAZIV</td><td>OPIS</td><td>KOLICINA</td>";
+	t += " <td>DOSTUPNOST</td></tr> ";
 
 	for (var i = 0; i < pr.length; ++i)
 	{
 		var p = pr[i];
-		s += " <tr><td> " + p.id+ //naziv!!!
-		" </td><td> " + p.ime + //opis!!!
-		" </td><td> " + p.prezime + //kolicina!!!
-		" </td><td> " + p.prisustvo + //cijena!!!
-		" </td><td> " + p.zadace + //dostupnost!!!
+		t += " <tr><td> " + p.id+ //naziv!!!
+		" </td><td> " + p.naziv + //opis!!!
+		" </td><td> " + p.opis + //kolicina!!!
+		" </td><td> " + p.kolicina + //cijena!!!
+		" </td><td> " + p.dostupnost + //dostupnost!!!
 		" </td></tr> ";
 	}
-	s += " </table> ";
-	return s;
+	t += " </table> ";
+	return t;
 }
 //END OF CREATETABLE(PR)----------------------------------------------------------------
 
