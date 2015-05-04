@@ -30,7 +30,7 @@ function prikaziTabelu()
 			alert("Invalidni podaci!");
 		}
 	};
-	ajax.open("GET", "http://zamger.etf.unsa.ba/wt/proizvodi.php?brindexa=16472", true);
+	ajax.open("GET", "http://zamger.etf.unsa.ba/wt/proizvodi.php?brindexa=16501", true);
 	ajax.send();
 }
 //---END OF prikaziTabelu---
@@ -70,7 +70,7 @@ function izvrsiAktivnost()
 	{
 		naziv : naz.value;
 		opis : op.value;
-		
+
 	}
 }
 //---END OF izvrsiAktivnost---

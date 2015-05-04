@@ -871,7 +871,7 @@ function foo1() //za prikazivanje tabele
 		} 
 
 	};
-	ajax.open("GET", "http://zamger.etf.unsa.ba/wt/proizvodi.php?brindexa=16472", true);//probaaaa
+	ajax.open("GET", "http://zamger.etf.unsa.ba/wt/proizvodi.php?brindexa=16501", true);//probaaaa
 	//ajax.open("GET", "http://zamger.etf.unsa.ba/wt/proizvodi.php?brindexa=16501", true);
 	ajax.send();
 	return false;
