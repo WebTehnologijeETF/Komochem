@@ -838,6 +838,17 @@ background-image: linear-gradient(to top, #DBDBD3 0%, #FFFFFF 90%);
 	border-color: yellow;
 }
 
+.photoNovost
+{
+	margin-left: 10px;
+	width: 670px;
+	height: 170px;
+	border-color: yellow;
+	border-width: 1px;
+	border-style: solid;
+}
+
+
 #tekstSavjeti
 {
 	position: absolute;
@@ -1150,6 +1161,19 @@ input[type="submit"]:hover{
 	border-style: solid;
 	border-width: 1px;
 }
+
+#slikaLogin2
+{
+	/*position: absolute;*/
+	width: 1019px;
+	height: 150px;
+	margin-left: 0px;
+	margin-top: 65px;
+	border-color: yellow;
+	border-style: solid;
+	border-width: 1px;
+}
+
 .slikaLjepila
 {
 	/*position: absolute;*/
@@ -1246,3 +1270,87 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 #formaPopuni{margin-left: 30px;}
 
 
+/*---NOVOSTI---*/
+#novostiDiv
+{
+	padding: 5px;
+	margin-left: 25px;
+	margin-top: 10px;
+	border-style: solid;
+	border-color: yellow;
+	border-width: 1px;
+	width: 960px;
+	height: 390px;
+	overflow-y : scroll;
+	max-height:  390px;
+}
+
+.novostPolje
+{
+	padding: 3px;
+	margin-left: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgray;
+	width: 930px;
+	height: 200px;
+	/*max-height: 210px;
+	overflow-y : scroll;	*/	
+	margin-top: 10px;
+}
+
+.poljeSlika
+{
+	padding: 2px;
+	margin-left: 3px;
+	border-style: solid; border-color: lightgray; border-width: 1px;
+	width: 180px;
+	height: 193px;
+	float: left;
+}
+
+.poljeTekst {margin-left: 200px;  height: 200px; 
+	max-height: 200px; overflow-y : scroll;
+}
+.detalis{color: blue; }
+
+.detaljnaNovost
+{
+	margin-left: 10px;
+	margin-top: 5px;
+	padding: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgray;
+	width: 980px;
+	height: 340px;
+	max-height: 340px;
+	overflow-y : scroll;
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #E8F3F5 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #E8F3F5 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #E8F3F5 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #E8F3F5));
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #E8F3F5 100%);
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #E8F3F5 100%);
+}
+
+.detaljnaNovostSlika
+{
+	margin-left: 5px;
+	margin-top: 5px;
+	height: 200px;
+	width: 200px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: lightgray;
+	float:  left;
+}
+
+.detaljnaNovostTekst
+{
+
+	width:750px;
+	height: 330px;
+	margin-left: 210px;
+	margin-top: 5px;
+}

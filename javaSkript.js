@@ -797,7 +797,7 @@ function ajaxRef()
 			//document.getElementById("slikaLjepila").style.zIndex = "-1";
 		}
 	}
-	ajax.open("GET", "ajaxR.html", true);
+	ajax.open("GET", "ajaxNovosti.php", true);
 
 	ajax.send();
 }
@@ -957,4 +957,43 @@ function foo2()
 	proizvodi[idx].zadace = document.getElementById("dostupnostP").value;
 	//ajax.send("akcija=" + akcija + "&brindexa=16501&proizvod=" + JSON.stringfy(proizvodi[idx]));
 	ajax.send("akcija=" + akcija + "&student=" + JSON.stringfy(proizvodi[idx]));
+}
+
+function foo3(dateTime, autor, naslov, opis, detOpis, slika)
+{	
+	//dateTime = "aa";
+	/*autor = "a";
+	naslov = "b";
+	opis = "c";
+	detOpis = "d";*/
+	
+	slika = "https://zamger.etf.unsa.ba/images/16x16/zad_ok.png"
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			//document.getElementById("slikaLjepila").style.zIndex = "-1";
+			alert("OKKK");
+		}
+	}
+	var varijabla = "ajaxNovostDetaljna.php?"+"dateTime="+dateTime+"&autor="+autor+"&naslov="+naslov+"&opis="+opis+"&detOpis="+detOpis+"&slika="+slika;
+	ajax.open("GET", varijabla, true);
+	ajax.send();
+	/*var ajax2 = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		var objekt = document.getElementById("detaljnaNovost");
+		if(ajax2.readyState == 4 && ajax2.status == 200)
+		{
+			objekt.innerHTML = ajax2.responseText;
+		}
+		else if (ajax2.readyState == 4 && ajax2.status == 404)
+			objekt.innerHTML = "Greska!";
+	}
+
+	var varijabla = "prikazDetaljnog.php?"+"dateTime="+dateTime+"&autor="+autor+"&naslov="+naslov+"&opis="+opis+"&detOpis="+detOpis;
+	ajax2.open("POST", varijabla, true);
+	ajax2.send();*/
 }
