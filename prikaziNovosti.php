@@ -69,7 +69,7 @@
  		if($bool == true)//ima detaljan
  		{
  			$opsirnije = '<a href = "#" class = "detalis" onclick = " return foo3('.$dateTime.','.$autorNovosti.','.$naslovNovosti.','.$opisNovosti.','.$detaljanOpisNovosti.','.$slikaNovosti.'); ">Opsirnije...</a>';
- 			$opsirnije = '<a href = "#" class = "detalis" onclick = "foo3(); ">Opsirnije...</a>';
+ 			//$opsirnije = '<a href = "#" class = "detalis" onclick = "foo3(); ">Opsirnije...</a>';
  		}
  		else
  		{

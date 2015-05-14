@@ -1,0 +1,90 @@
+<!DOCTYPE HTML SYSTEM>
+<html>
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8">
+		<title>KOMOCHEM d.o.o. Visoko</title>
+		<link rel="stylesheet" type="text/css" href="stilTest.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ek+Mukta">
+		<link href='http://fonts.googleapis.com/css?family=Hind:600' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<div id = "formaJedan">
+			<h3 class ="slova" >Kontaktirajte nas</h3>
+			<form name = "formJedan" action = "ajaxContact.php" method = "post">
+				<!--forma za kontaktiranje-->
+				<!--IME-->
+				<div id = "ime" name = "ime">
+					 Ime : <span class = "obavezno">*</span>   <br>
+					<input class = "inputi" type = "text" name = "firstName">
+					 <br><br>
+				</div>
+
+				<!--PREZIME-->
+				<div id = "prezime" name = "prezime">
+					 Prezime : <span class = "obavezno">*</span>   <br>
+					<input class = "inputi" type = "text" name = "secondName">
+					<br><br>
+				</div>
+
+				<!--Telefon-->
+				<div id = "telefon" name = "telefon">
+					 Broj telefona :   <br>
+					<input class = "inputi" type = "text" name = "telephone">
+					<br><br>
+				</div>
+
+				<!--Email  -->
+				<div id = "e_mail" name = "e_mail">
+					 Email : <span class = "obavezno">*</span>   <br>
+					<input class = "inputi" type = "text" name = "email">
+					<br><br>
+				</div>
+
+				<!--Tip pretplate-->
+				<div id = "tipPret" name = "tipPret">
+					 Tip pretplate :<br>
+					<select class = "inputi" id  = "type" name = "type">
+						<option id = "mala" value = "mala">Mala</option>
+						<option id = "srednja" value = "srednja">Srednja</option>
+						<option id = "velika" value = "velika">Velika</option>
+					</select>
+					<p>&nbsp;</p>
+				</div>
+
+				<!--Broj mjeseci-->
+				<div id = "mjeseciBroj" name = "mjeseciBroj">
+					Broj mjeseci pretplate : <span class = "obavezno">*</span>   <br>
+					<input class = "inputi" type = "text" name = "months">
+					<br><br>
+				</div>
+
+				<!--Poruka-->
+				<div id = "porukaSlati" name = "porukaSlati">
+					Vaša poruka : <span class = "obavezno">*</span>   <br>
+					<textarea id = "inputPoruka" rows="10" cols="40" name="message"></textarea>
+					<br><br>
+				</div>
+
+				<!--posalji-->
+				<div id = "posaljiSve" name = "posaljiSve">
+					<button id ="salji" name = "sendAll" type = "submit" value = "Submit">Pošalji</button>
+				</div>
+
+				<!--Resetuj-->
+				<div id = "resetujSve" name = "resetujSve">
+					<button id ="resetuj" name = "resetAll" type = "reste" value = "Reset">Resetuj</button>
+				</div>
+
+
+
+			</form>
+		</div>
+		<div id = "formaDva">
+			<h4 class = "slova">Treća spirala - Servis</h4>
+		</div>
+
+			
+	</body>
+
+</html>

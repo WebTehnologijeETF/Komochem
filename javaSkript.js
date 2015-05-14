@@ -644,7 +644,7 @@ function ajaxKontakt()
 			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
 		}
 	}
-	ajax.open("GET", "ajaxKontakt.html", true);
+	ajax.open("GET", "ajaxContact.html", true);
 	ajax.send();;
 }
 
