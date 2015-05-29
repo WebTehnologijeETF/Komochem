@@ -8,21 +8,24 @@
 		<link href='http://fonts.googleapis.com/css?family=Hind:600' rel='stylesheet' type='text/css'>
 	</head>
 
-	<body id = "bodi">
+	<body onload = "ajaxPocetna();" id = "bodi">
 		<!--okvir-->
+
 		<div class = "okvir">
 			<!--gornji meni-->
 			<div class = "meni_gore">
 				<ul class = "meni">
-					<li class = "pocetna"><a href="#" onclick = "ajaxPocetna(); return false;">POČETNA</a></li>
+					<li class = "pocetna"><a href="#" onclick = "ajaxPocetna(); return false;">POČENTA</a></li>
 					<li class = "onama"><a href="#" onclick = "ajaxOnama();return false;">O NAMA</a></li>
 					<li class = "kontakt"><a href="#" onclick = "ajaxKontakt(); return false;">KONTAKT</a></li>
+					<li class = "kontakt"><a href="panel.php" >LOG IN</a></li>
+
 				</ul>
 			</div>
 			<!--END OF meni_gore-->
 			
-			<div class = "zuta"></div>
-			<div class = "crna"></div>
+			<!--<div class = "zuta"></div>
+			<div class = "crna"></div>-->
 			<!--CONTAINER-->
 			<div class = "container">
 				<!--meni glavni-->
@@ -105,77 +108,7 @@
 
 				<!--DIO ZA AJAX, treba izdvojiti-->
 				<div id = "onoZaAjax">
-
-
-					
-
-					<div class = "photos">
-						<img src="imgPoc.jpg" alt = "" width = "100%" height = "100%">
-					</div>
-
-					<div class = "nn">NOVOSTI</div>
-					<div class = "novosti">
-						<div class = "podnovosti" id = "n1">
-							<h5>Novo u ponudi</h5>
-							<p>
-								Komolazur <a href="#">opširnije...</a>
-							</p>
-							<p class = "ko">
-								29.03.2015;22:10;F.O.
-							</p>
-						</div>
-
-						<div class = "podnovosti" id = "n2">
-							<h5>Novo u ponudi</h5>
-							<p>
-								Komolux <a href="#">opširnije...</a>
-							</p>
-							<p class = "ko">
-								29.03.2015;22:10;F.O.
-							</p>
-						</div>
-
-						<div class = "podnovosti" id = "n3">
-							<h5>Novo u ponudi</h5>
-							<p>
-								Komokor <a href="#">opširnije...</a>
-							</p>
-							<p class = "ko">
-								29.03.2015;22:10;F.O.
-							</p>
-						</div>
-
-						<div class = "podnovosti" id = "n4">
-							Nešto
-						</div>
-					</div>
-
-					<div class = "referenceNaslov">Reference</div>
-					<div class = "reference">	
-						<img src="bemust.jpg" alt = "" width = "100%" height = "100%">
-						<div class = "refref">
-							<p>Pogledajte gradilišta na kojima</p>
-							<p class = "more">je KOMOCHEM&nbsp;<a href="reference.html">Opšrinije...</a></p>
-						</div>
-					</div>
-					<div class = "downloadsNaslov">Downloads</div>
-					<div class ="downloads">
-						<img src="downmanja.png" alt = "" width = "100%" height = "100%">
-						<div class = "refref">
-							<p>Download specifikacija</p>
-							<p class = "more">svih proizvoda &nbsp;<a href="download.html">Opširnije...</a></p>
-						</div>
-					</div>
-					
-					<div class = "kalkulator">
-						<img src="kalk.jpg" alt = "" width = "100%" height = "100%">
-						<div class = "refref">
-							<p>Izračunajte konačnu cijenu</p>
-							<p class = "more"> na osnovu <a href="kalkulator.html">Opširnije...</a></p>
-						</div>
-					</div>
-					<div class = "kalkNaslov">Kalkulator</div>
-
+				
 				</div>
 				<!--KRAJ DIJELA ZA AJAX STO TREBA IZDVOJITI-->
 			</div>
@@ -184,24 +117,7 @@
 		 <!--END OF okvir-->	
 		</div>
 
-		<script src = "javaSkript.js">
-		
-		
-		/*function ZatvoriMeni()
-		{
-			Timer = window.setTimeout(Zatvori, 5000);
-		}
-
-		function Zatvori()
-		{
-			Meni.style.visibility = "hidden";
-		}
-
-		function DrziOtvoren()
-		{
-			window.clearTimeout(Timer);
-		}*/
-		</script>
+		<script src = "javaSkript.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src = "ajaxTabela.js"></script>
 		<script src = "ajaxNovostiSql.js"></script>

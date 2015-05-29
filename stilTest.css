@@ -61,6 +61,7 @@ background-image: linear-gradient(to top, #4A4A4A 0%, #FFFFFF 90%);
 	width: 100%;
 	height: 8%;
 	text-decoration: none;
+
 	/*box-shadow: 10px 10px 10px #888888;*/
 	/*top-margin : 2px;*/
 	/* IE10 Consumer Preview */ 
@@ -86,10 +87,10 @@ background-image: linear-gradient(to bottom, #FFF70A 0%, #FFFFFF 100%);
 .meni_gore ul
 {
 	list-style: none;
-	text-align: left;
+	/*text-align: left;*/
 	margin: 0;
 	padding: 15px;
-	margin-left: 50px;
+	margin-left: 175px;
 	position: absolute;
 	text-decoration: none;
 
@@ -132,7 +133,7 @@ background-image: linear-gradient(to bottom, #FFF70A 0%, #FFFFFF 100%);
 {
 	margin: 0 auto;
 	width: 1020px;
-	height: 880px;
+	height: 920px;
 	background-color: gray;
 	position: relative;
 	padding: 0;
@@ -1277,7 +1278,7 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 	margin-left: 25px;
 	margin-top: 10px;
 	border-style: solid;
-	border-color: yellow;
+	border-color: green;
 	border-width: 1px;
 	width: 960px;
 	height: 550px;
@@ -1309,8 +1310,24 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 	float: left;
 }
 
-.poljeTekst {margin-left: 200px;  height: 200px; 
-	max-height: 200px; overflow-y : scroll;
+.poljeTekst {margin-left: 200px;  height: 150px; 
+	max-height: 150px; overflow-y : scroll; padding :2px;
+	
+}
+
+
+
+.poljeKomentari
+{
+	margin-left: 10px;  height: 27px; padding :2px;
+	
+	margin-top: 5px; float : left;
+}
+
+.dodajKomentar 
+{
+	margin-top: 7px; margin-left: 800px;
+	color: blue;
 }
 .detalis{color: blue; }
 
@@ -1353,6 +1370,7 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 	height: 330px;
 	margin-left: 210px;
 	margin-top: 5px;
+	
 }
 
 .slova{font-family: 'Ek Mukta'; color: gray;}
@@ -1430,3 +1448,148 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 }
 .pitanje {font-family: 'Ek Mukta'; color: darkred;  }
 .obavezno {color: red;}
+.brojKomentara{color:red;}
+.komentarDetaljna{margin-top: -80px;margin-left: 20px;}
+#naslovNovosti
+{
+	font-family: 'Ek Mukta';
+	font-size: 15px;
+	color: darkgray;
+	padding: 10px;
+}
+.okvirKomentari
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: lightgray;
+	width: 550px;
+	height: 650px;
+	/*position: absolute;*/
+	float: left;
+	margin-left: 10px;
+	max-height: 650px;
+	margin-top: 10px;
+	overflow-y : scroll;
+}
+
+.formaKomentar
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: lightgray;
+	width: 410px;
+	height: 200px;
+	margin-left: 580px;
+	margin-top: 150px;
+	padding: 10px;
+	position: absolute;
+
+}
+
+.komentar
+{
+	/*border-width: 1px;
+	border-style: solid;
+	border-color: lightgray;*/
+	width: 510;
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 180px;
+	padding: 3px;
+	background: lightgray;
+}
+.tekstKomentar{height: 120px;}
+#emailKomentar{left: 130px; position: absolute;}
+
+/*---LOG IN ---*/
+
+.logInOkvir
+{
+	border-style: solid;;
+	border-color: yellow;
+	border-width: 1px;
+	width: 500px;
+	height: 350px;
+	margin-left: 270px;
+	margin-top: 100px;
+	background: lightgray;
+	padding: 15px;
+}
+#naslovLogIn
+{
+	text-align: center;
+	font-family: 'Ek Mukta';
+	color: gray;
+}
+
+.formaLogIn
+{
+	width: 200px;
+	height: 200px;
+	margin-top: 20px;
+	margin-left: 170px;
+}
+
+.formaDodaj
+{
+	width: 200px;
+	height: 200px;
+	margin-top: 20px;
+	margin-left: 120px;
+}
+
+#user, #password{border: 2px solid gray; height: 25px;}
+.unos{border: 2px solid gray; height: 25px;}
+#log{height: 30px; width: 90px; margin-left: 40px; border-color: gray;}
+.prijavaNaslov{color: gray; margin-left: 20px;}
+/*.logoutForm{margin-left: 500px; margin-top: -20px;}*/
+.logButton{height: 25px; width: 150px; background: gray; border-style: solid; color: white; margin-top: 8px;}
+.operacije{width: 980px; height: 40px; position: absolute;margin-left: 20px; margin-top: 45px;}
+.proba{visibility: hidden;}
+.podOp{visibility: hidden;border: 1px solid gray; width: 100px; height: 200px;margin-top: 60px;margin-left: 30px;}
+.formaDodajKorisnika
+{
+	border: 1px solid lightgray;
+	margin-top: 100px;
+	background: lightgray;
+	margin-left: 340px;
+	width: 400px;
+	height: 340px;
+}
+.formaBrisanjeKorisnika
+{
+	border: 1px solid lightgray;
+	margin-top: 100px;
+	background: lightgray;
+	margin-left: 140px;	
+	width: 700px;
+	height: 400px;
+	max-height: 400px;
+	overflow-y:scroll;
+}
+
+.korisnikPodaci
+{
+	border: 1px solid gray;
+	margin-left: 20px;
+	width: 640px;
+	height: 50px;
+	margin-top: 10px;
+}
+
+#podatak{margin-top: 8px; margin-left:80px;}
+
+.formaDodajNovost
+{
+	border: 1px solid lightgray;
+	margin-top: 100px;
+	background: lightgray;
+	margin-left: 200px;
+	width: 600px;
+	height: 440px;
+}
+#formaNovost{margin-left: 150px;}
+#inputAutor{margin-left: 40px;}
+#inputNaslov{margin-left: 33px;}
+#inputKratkiOpis{margin-left: 8px;}
+#inputUrl{margin-left: 79px;}

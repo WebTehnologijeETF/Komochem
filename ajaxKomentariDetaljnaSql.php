@@ -14,7 +14,7 @@
 			<!--gornji meni-->
 			<div class = "meni_gore">
 				<ul class = "meni">
-					<li class = "pocetna"><a href="#" onclick = "ajaxPocetna(); return false;">POČETNA</a></li>
+					<li class = "pocetna"><a href="#" onclick = "ajaxPocetna(); return false;">POČENTA</a></li>
 					<li class = "onama"><a href="#" onclick = "ajaxOnama();return false;">O NAMA</a></li>
 					<li class = "kontakt"><a href="#" onclick = "ajaxKontakt(); return false;">KONTAKT</a></li>
 				</ul>
@@ -82,100 +82,124 @@
 						<img src="gugl.png" alt = "">
 					</a>
 				</div>
-				<!--END OF IKONE-->
-				
 
-				
-
-
-				<!--NOVOSTI-->
-
-				<!--Dodavanje novosit po šablonu : 
-
-				<div class = "podnovosti" id = "n2">
-						<h5>NASLOV</h5>
-						<p>
-							TEXT <a href="#">opširnije...</a>
-						</p>
-						<p class = "ko">
-							DATUM;VRIJEME;VLASNIK
-						</p>
-				</div>
-				-->
-
-				<!--DIO ZA AJAX, treba izdvojiti-->
 				<div id = "onoZaAjax">
 
+					<div id = "slikaLogin2">
+						<img src="loginPhoto.jpg" alt = "" height = "100%" width = "100%">
+					</div>
+					<?php
+						header('Content-type: text/html; charset=utf-8');
 
+					?>	
 					
+					<div class = "okvirKomentari">
+						<?php 
+							$id = $_POST['novostID'];
+							$veza = new PDO("mysql:dbname=wts;host=localhost;charset=utf8", "wtadmin", "wtadmin");
+							$veza->exec("set names utf8");
+							$rezultat = $veza->query("select id, UNIX_TIMESTAMP(datum) datum2, autorkomentara,email, tekstkomentara from komentar where idvijesti=".$id);
+							$rezultatNovost = $veza->query("select naslovnovosit from novosti where id=".$id);
+							foreach ($rezultatNovost as $novost) 
+							{
+								print "<p id = 'naslovNovosti'> Naslov novosti : ".$novost['naslovnovosit']."</p>";	
+							}
+							
+							foreach ($rezultat as $komentar) 
+							{
+								#---varijable---
+								$datumKomentara = date("h:m:Y (h:i)", $komentar['datum2']);
+								$autorkomentara = $komentar['autorkomentara'];
+								$emailKomentar = $komentar['email'];
+								$tekstKomentar = $komentar['tekstkomentara'];
+								#---varijable---
+								print "<div class = 'komentar'>
+										<small>Datum objave : <i>".$datumKomentara."</i></small><br>
+										Autor komentara : <i>".$autorkomentara."</i><br>
+										Email : <i>".$emailKomentar."</i><br>
+										<div class = 'tekstKomentar'>
+										Tekst komentara : ".$tekstKomentar."
+										</div>
+										<hr>
+									  </div>";
+								
+							}
+							
+						?>
+						<!--<div class = "komentar">
+							Datum objave : ---<br>
+							Autor : ---<br>
+							Email : ---<br>
+							<div class = "tekstKomentar">
+							Tekst : ---<br>
+									---<br>
+									---<br>
+							</div>
+							<hr>
+						</div>
 
-					<div class = "photos">
-						<img src="imgPoc.jpg" alt = "" width = "100%" height = "100%">
+						<div class = "komentar">
+							Datum objave : ---<br>
+							Autor : ---<br>
+							Email : ---<br>
+							<div class = "tekstKomentar">
+							Tekst : ---<br>
+									---<br>
+									---<br>
+							</div>
+							<hr>
+						</div>
+						-->
 					</div>
+					<?php 
+					#---VARIJABLE---
+						$autor=$email=$tekst="";
+						$autorGreska=$emailGreska=$tekstGreska="";
+						$bool1=true; $bool2 = true;
+					#---VARIJABLE---
+						if(isset($_POST) && array_key_exists('sabmit',$_POST))
+						{
 
-					<div class = "nn">NOVOSTI</div>
-					<div class = "novosti">
-						<div class = "podnovosti" id = "n1">
-							<h5>Novo u ponudi</h5>
-							<p>
-								Komolazur <a href="#">opširnije...</a>
-							</p>
-							<p class = "ko">
-								29.03.2015;22:10;F.O.
-							</p>
-						</div>
+							$autor = testInput($_POST['autor']);
+							if(!empty($_POST['autor']) && !preg_match("/^[a-zA-Z ]*$/",$autor)) 
+							{
+								$autorGreska = "Greska! Dozvoljeni samo znakovi.";
+								$bool1 = false;
+							}
+							$email = testInput($_POST['email']);
+							$tekst = testInput($_POST['comment']);
+							
+						}
 
-						<div class = "podnovosti" id = "n2">
-							<h5>Novo u ponudi</h5>
-							<p>
-								Komolux <a href="#">opširnije...</a>
-							</p>
-							<p class = "ko">
-								29.03.2015;22:10;F.O.
-							</p>
-						</div>
+						function testInput($data) 
+						{
+						   $data = trim($data);
+						   $data = stripslashes($data);
+						   $data = htmlspecialchars($data);
+						   return $data;
+						}
+						if($bool1)
+						{
+							$rezultat = $veza->query("INSERT INTO komentar (idvijesti, autorkomentara, email, tekstkomentara) VALUES 
+							('$id', '$autor', '$email', '$tekst')");
 
-						<div class = "podnovosti" id = "n3">
-							<h5>Novo u ponudi</h5>
-							<p>
-								Komokor <a href="#">opširnije...</a>
-							</p>
-							<p class = "ko">
-								29.03.2015;22:10;F.O.
-							</p>
-						</div>
+						}
+						
+						header("Location : temp.html");
 
-						<div class = "podnovosti" id = "n4">
-							Nešto
-						</div>
-					</div>
-
-					<div class = "referenceNaslov">Reference</div>
-					<div class = "reference">	
-						<img src="bemust.jpg" alt = "" width = "100%" height = "100%">
-						<div class = "refref">
-							<p>Pogledajte gradilišta na kojima</p>
-							<p class = "more">je KOMOCHEM&nbsp;<a href="reference.html">Opšrinije...</a></p>
-						</div>
-					</div>
-					<div class = "downloadsNaslov">Downloads</div>
-					<div class ="downloads">
-						<img src="downmanja.png" alt = "" width = "100%" height = "100%">
-						<div class = "refref">
-							<p>Download specifikacija</p>
-							<p class = "more">svih proizvoda &nbsp;<a href="download.html">Opširnije...</a></p>
-						</div>
-					</div>
+						
+					?>
+					<div class = "formaKomentar">
+					<h4>Ostavite komentar</h4><br><br>
+						<form class = "ostaviKomentar" action = "ajaxKomentariDetaljnaSql.php" method = "post">
+							<input   id ="novosID" name="novostID" value="<?php echo $id;?>" type="hidden"> 
+							Autor komentara : <input type = "text" name = "autor"><br><br>
+							Email : <input type = "text" name = "email"><br><br>
+							Tekst komentara : <textarea rows  = "2" cols = "20" name="comment" required = "required"></textarea>
+							<input type = "submit" name = "sabmit">	
+						</form>
+					</div>	
 					
-					<div class = "kalkulator">
-						<img src="kalk.jpg" alt = "" width = "100%" height = "100%">
-						<div class = "refref">
-							<p>Izračunajte konačnu cijenu</p>
-							<p class = "more"> na osnovu <a href="kalkulator.html">Opširnije...</a></p>
-						</div>
-					</div>
-					<div class = "kalkNaslov">Kalkulator</div>
-
 				</div>
 				<!--KRAJ DIJELA ZA AJAX STO TREBA IZDVOJITI-->
 			</div>

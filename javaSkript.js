@@ -615,7 +615,7 @@ function ajaxPocetna()
 			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
 		}
 	}
-	ajax.open("GET", "ajaxPocetna.html", true);
+	ajax.open("GET", "pocetna.html", true);
 	ajax.send();
 }
 
@@ -646,6 +646,20 @@ function ajaxKontakt()
 	}
 	ajax.open("GET", "ajaxContact.html", true);
 	ajax.send();;
+}
+
+function ajaxLogIn()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+		}
+	}
+	ajax.open("GET", "ajaxLogIn.php", true);
+	ajax.send();
 }
 
 function ajaxLjepila()
@@ -797,7 +811,7 @@ function ajaxRef()
 			//document.getElementById("slikaLjepila").style.zIndex = "-1";
 		}
 	}
-	ajax.open("GET", "ajaxNovosti.php", true);
+	ajax.open("GET", "ajaxNovostSql.php", true);
 
 	ajax.send();
 }
@@ -997,3 +1011,99 @@ function foo3(dateTime, autor, naslov, opis, detOpis, slika)
 	ajax2.open("POST", varijabla, true);
 	ajax2.send();*/
 }
+
+function foo4()
+{
+	alert("AAA");
+}
+
+function kreirajIDodaj()
+{
+	//alert("Dodaoo");
+	var ajax = new XMLHttpRequest();
+	var forma = document.getElementById("formaDodaj");
+	var username = forma.inputUsername.value;
+	var password = forma.inputPassword.value;
+	if (username == "" || username == null || password == "" || password == null) 
+	{
+		alert("Morate unijeti vrijednosti!!");
+		return;
+	};
+	var userId = "prazno";
+	var varijabla = "userID="+userId.toString()+"&username="+username+"&password="+password;
+	ajax.onreadystatechange = function()
+	{//an
+		
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			
+		}
+	}
+
+	ajax.open("POST", "kreirajIDodajUBazu.php", true);
+	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	ajax.send(varijabla);
+}
+
+function vratiSe()
+{
+	ajaxPocetna();	
+}
+
+function obrisiKorisnika(idK)
+{
+	//alert("briseeeem");
+	var ajax = new XMLHttpRequest();
+	var forma = document.getElementById('podatak');
+	var userID = idK
+	//alert(userID.toString());
+	var varijabla = "userID="+userID.toString();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			
+		}
+	}
+	ajax.open("POST", "obrisiKorisnikIzBaze.php", true);
+	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	ajax.send(varijabla);
+
+}
+
+function kreirajIDodajNovost()
+{
+	var ajax = new XMLHttpRequest();
+	var forma = document.getElementById('formaNovost');
+	var autor = document.getElementById('inputAutor').value;
+	var naslov = document.getElementById('inputNaslov').value;
+	var kratkiOpis = document.getElementById('inputKratkiOpis').value;
+	var detaljno = document.getElementById('inputDetaljno').value;
+	var url = document.getElementById('inputUrl').value;
+
+	if (autor == "" || autor == null || naslov == "" || naslov == null || kratkiOpis == "" || kratkiOpis == null)
+	{
+		alert("Morate unijeti podatke!");
+		return;
+	}
+
+	var varijabla = "autor="+autor+"&naslov="+naslov+"&kratkiOpis="+kratkiOpis+"&detaljno="+detaljno+"&url="+url;
+	//alert(varijabla);
+	ajax.onreadystatechange = function()
+	{//an
+		
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			
+		}
+	}
+
+	ajax.open("POST", "kreirajIDodajUBazuNovost.php", true);
+	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	ajax.send(varijabla);
+}
+
+
