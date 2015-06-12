@@ -19,7 +19,7 @@
 					<li class = "pocetna"><a href="index.php" >POČENTA</a></li>
 					<li class = "onama"><a href="#" onclick = "ajaxOnama();return false;">O NAMA</a></li>
 					<li class = "kontakt"><a href="#" onclick = "ajaxKontakt(); return false;">KONTAKT</a></li>
-					<li class = "kontakt"><a href="panel.php" >LOG IN</a></li>
+					<li class = "kontakt"><a href="panelWebServis.php" >LOG IN</a></li>
 
 				</ul>
 			</div>
@@ -151,8 +151,8 @@
 							<form action = "panel.php" method = "post" class = "logoutForm">
 								<input class = "logButton" id = "logoutBtn"type = "submit" value = "logout" name ="logout">
 
-								<input class = "logButton" id = "addUserBtn"type = "submit" value = "Dodaj korisnika" name = "addUserBtn">
-								<input class = "logButton" id = "delUserBtn"type = "submit" value = "Obriši korisnika" name = "delUserBtn">
+								<input class = "logButton" id = "addUserBtn"type = "button" value = "Dodaj korisnika" name = "addUserBtn" onclick = "addUser()">
+								<input class = "logButton" id = "delUserBtn"type = "button" value = "Obriši korisnika" name = "delUserBtn" onclick = "deleteUser()">
 
 								<input class = "logButton" id = "addNewsBtn"type = "submit" value = "Dodaj novost" name = "addNewsBtn">
 								<input class = "logButton" id = "delNewsBtn"type = "submit" value = "Obriši novost" name = "delNewsBtn">
@@ -174,7 +174,7 @@
 					<?php endif;?>	
 
 			<?php endif;?>
- 
+ 			<div id = "onoZa"></div>
 			<?php if(isset($_SESSION['username'])): ?>
 
 
@@ -198,48 +198,6 @@
 						</form>
 					</div>
 				<?php endif;?>
-
-				<?php if(isset($_POST['delUserBtn'])): ?>
-				<!--AKO JE ODABRANO BRISANJE KORISNIKA-->
-
-					<!--ISPIS KORISNIKAAAAA-->
-					<?php 
-						$veza = new PDO("mysql:dbname=wts;host=localhost", "wtadmin", "wtadmin");
-						$veza->exec("set names utf-8");
-
-						$rezultat = $veza->query("SELECT id, username, password from korisnik");
-						//$rezultat = $rezultat->fetchAll();
-						if(!$rezultat)
-						{
-							$greska = $veza->errorInfo();
-				              print "SQL greška: " . $greska[2];
-				              exit();
-						}
-						$id = $username = $password = "nema";
-						echo '<div class = "formaBrisanjeKorisnika">';
-						foreach ($rezultat as $korisnik) 
-						{
-							$idKorisnika = $korisnik['id'];
-							$username = $korisnik['username'];
-							$password = $korisnik['password'];
-							
-						echo '<div class = "korisnikPodaci">
-							<form id = "podatak">
-								Korisničko ime : <input type = "text" value = "'.$username.'" class = "unos" disabled >
-								<input type = "hidden" id = "idKorisnik" value = "'.$idKorisnika.'"> 
-								<input type = "button" value = "Obriši!" id = "log" onclick = "obrisiKorisnika('.$idKorisnika.')">
-
-							</form>
-						</div>';
-
-						}
-						echo '</div>';	
-					?>
-					
-
-				<?php endif; ?>
-
-				
 
 				<?php if(isset($_POST['addNewsBtn'])):?>
 				<!--AKO JE ODABRAO DA DODAJE NOVOST!!!!-->
@@ -382,6 +340,7 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src = "ajaxTabela.js"></script>
 		<script src = "ajaxNovostiSql.js"></script>
+		<script src = "servSkripta.js"></script>
 		
 	</body>
 

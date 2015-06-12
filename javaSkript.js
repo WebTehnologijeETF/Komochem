@@ -1024,13 +1024,28 @@ function kreirajIDodaj()
 	var forma = document.getElementById("formaDodaj");
 	var username = forma.inputUsername.value;
 	var password = forma.inputPassword.value;
+	var tipovi = document.getElementsByName("tip");
+	var tip = "";
+	var tipBroj;
+	for(var i = 0, length = tipovi.length; i < length; i++)
+	{
+		if(tipovi[i].checked)
+		{
+			tip = tipovi[i].value;
+			break;
+		}
+	}
+	if(tip === "obicni") tipBroj = 0;
+	else tipBroj = 1;
+
+	alert(tipBroj.toString());
 	if (username == "" || username == null || password == "" || password == null) 
 	{
 		alert("Morate unijeti vrijednosti!!");
 		return;
 	};
 	var userId = "prazno";
-	var varijabla = "userID="+userId.toString()+"&username="+username+"&password="+password;
+	var varijabla = "userID="+userId.toString()+"&username="+username+"&password="+password+"&tip="+tipBroj;
 	ajax.onreadystatechange = function()
 	{//an
 		
@@ -1073,6 +1088,26 @@ function obrisiKorisnika(idK)
 
 }
 
+function obrisiNovost(idNovosti)
+{
+	//alert(idNovosti);
+	var ajax = new XMLHttpRequest();
+	var userID = idNovosti;
+	var varijabla = "userID="+userID.toString();
+	ajax.onreadystatechange = function()
+	{
+		
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			
+		}
+	}
+	ajax.open("POST", "obrisiNovostIzBaze.php", true);
+	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	ajax.send(varijabla);
+}
+
 function kreirajIDodajNovost()
 {
 	var ajax = new XMLHttpRequest();
@@ -1102,6 +1137,51 @@ function kreirajIDodajNovost()
 	}
 
 	ajax.open("POST", "kreirajIDodajUBazuNovost.php", true);
+	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	ajax.send(varijabla);
+}
+
+function dodajKomentarUBazu(newID)
+{
+	var ajax = new XMLHttpRequest();
+	var autor = document.getElementById('autorComment').value;
+	var komentar = document.getElementById('commentAdd').value;
+	var novostID = newID.toString();
+	var email = document.getElementById('emailAutora').value;
+	if(komentar == "" || komentar == null)
+	{
+		alert ("Morate unijeti komentar");
+		return;
+	}
+
+	var varijabla = "autor="+autor+"&komentar="+komentar+"&novostID="+novostID+"&email="+email;
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+			
+		}
+	}
+	ajax.open("POST", "kreirajIDodajNovost.php",true);
+	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	ajax.send(varijabla);
+}	
+
+function otvoriZaKomentar(idNovosti)
+{
+	alert("Uso");
+	var ajax = new XMLHttpRequest();
+	var newID = idNovosti;
+	var varijabla = "newID="+newID.toString();
+	ajax.onreadystatechange = function()
+	{
+		if(ajax.readyState == 4 && ajax.status == 200)
+		{
+			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
+		}
+	}
+	ajax.open("POST", "formaDodajKomentar.php", true);
 	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	ajax.send(varijabla);
 }

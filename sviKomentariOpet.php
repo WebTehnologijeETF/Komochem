@@ -17,12 +17,12 @@
 					<li class = "pocetna"><a href="#" onclick = "ajaxPocetna(); return false;">POČENTA</a></li>
 					<li class = "onama"><a href="#" onclick = "ajaxOnama();return false;">O NAMA</a></li>
 					<li class = "kontakt"><a href="#" onclick = "ajaxKontakt(); return false;">KONTAKT</a></li>
+					<li class = "kontakt"><a href="panel.php" >LOG IN</a></li>
 				</ul>
 			</div>
 			<!--END OF meni_gore-->
 			
-			<div class = "zuta"></div>
-			<div class = "crna"></div>
+		
 			<!--CONTAINER-->
 			<div class = "container">
 				<!--meni glavni-->

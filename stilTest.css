@@ -1538,12 +1538,22 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 	margin-left: 120px;
 }
 
+.formaDodajK
+{
+	width: 200px;
+	height: 200px;
+	margin-top: 5px;
+	margin-left: 70px;
+}
+.btn{border: 2px solid gray; height: 25px;}
 #user, #password{border: 2px solid gray; height: 25px;}
 .unos{border: 2px solid gray; height: 25px;}
+.tekstArea{border:2px solid gray;}
 #log{height: 30px; width: 90px; margin-left: 40px; border-color: gray;}
+#logNovost{height: 30px; width: 90px; margin-left: 490px; margin-top:-45px;border-color: gray;}
 .prijavaNaslov{color: gray; margin-left: 20px;}
 /*.logoutForm{margin-left: 500px; margin-top: -20px;}*/
-.logButton{height: 25px; width: 150px; background: gray; border-style: solid; color: white; margin-top: 8px;}
+.logButton{height: 25px; width: 130px; background: gray; border-style: solid; color: white; margin-top: 8px;}
 .operacije{width: 980px; height: 40px; position: absolute;margin-left: 20px; margin-top: 45px;}
 .proba{visibility: hidden;}
 .podOp{visibility: hidden;border: 1px solid gray; width: 100px; height: 200px;margin-top: 60px;margin-left: 30px;}
@@ -1588,8 +1598,49 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 	width: 600px;
 	height: 440px;
 }
+
+.formaDodajKomentar
+{
+	border: 1px solid lightgray;
+	margin-top: 100px;
+	background: lightgray;
+	margin-left: 170px;
+	width: 650px;
+	height: 520px
+}
 #formaNovost{margin-left: 150px;}
 #inputAutor{margin-left: 40px;}
 #inputNaslov{margin-left: 33px;}
 #inputKratkiOpis{margin-left: 8px;}
 #inputUrl{margin-left: 79px;}
+.novostiPodaci
+{
+	border: 1px solid gray;
+	margin-left: 20px;
+	width: 640px;
+	height: 80px;
+	margin-top: 10px;
+}
+.formaBrisanjeNovosti
+{
+	border: 1px solid lightgray;
+	margin-top: 100px;
+	background: lightgray;
+	margin-left: 140px;	
+	width: 700px;
+	height: 400px;
+	max-height: 400px;
+	overflow-y:scroll;
+}
+
+#novostForm
+{
+	margin-left: 20px;
+}
+
+#novostFormK
+{
+	margin-left: 20px;
+}
+
+/*dodavanje komentara na novost*/
