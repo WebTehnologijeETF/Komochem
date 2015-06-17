@@ -51,7 +51,7 @@
 							<li><a href="#" onclick = "ajaxRef(); return false;">Novosti</a></li>
 							<li><a href="#" onclick = "ajaxDown(); return false;">Proizvodi lista</a></li>
 							<!--<li><a href="#">Postanite prijatelj</a></li>-->
-							<li><a href = "#" onclick = "ajaxPrij(); return false;">Postanite prijatelj</a></li>
+							<li><a href = "#" onclick = "ajaxReference(); return false;">Reference</a></li>
 						</ul>
 					</div>
 				</div>

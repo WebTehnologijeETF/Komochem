@@ -456,10 +456,10 @@ width: 290px;
 .reference 
 {
 	
-	margin-left: 10px;
+	margin-left: 40px;
 	width: 250px;
 	height: 24%;
-	margin-top: 30px;
+	margin-top: 80px;
 	float: left;
 	background-image: -ms-linear-gradient(bottom, #DBDBD3 0%, #FFFFFF 90%);
 
@@ -483,10 +483,10 @@ background-image: linear-gradient(to top, #DBDBD3 0%, #FFFFFF 90%);
 .downloads 
 {
 	
-	width: 240px;
-	margin-left: 280px;
+	width: 250px;
+	margin-left: 380px;
 	height: 24%;
-	margin-top: 30px;
+	margin-top: 80px;
 	background-image: -ms-linear-gradient(bottom, #DBDBD3 0%, #FFFFFF 90%);
 
 /* Mozilla Firefox */ 
@@ -510,8 +510,8 @@ background-image: linear-gradient(to top, #DBDBD3 0%, #FFFFFF 90%);
 /*KALKULATOR*/
 .kalkulator 
 {
-	width: 200px;
-	margin-left: 550px;
+	width: 250px;
+	margin-left: 710px;
 	margin-top: -220px;
 	height: 24%;
 	position: absolute;
@@ -707,8 +707,8 @@ background-image: linear-gradient(to top, #DBDBD3 0%, #FFFFFF 90%);
 	font-weight: bold;
 	position: absolute;
 	width: 240px;
-	margin-left: 10px;
-	margin-top: 27px;
+	margin-left: 40px;
+	margin-top: 75px;
 	/*background-color: yellow;*/
 	/* IE10 Consumer Preview */ 
 background-image: -ms-linear-gradient(bottom, #DBDBD3 0%, #FFFFFF 90%);
@@ -737,9 +737,9 @@ background-image: linear-gradient(to top, #DBDBD3 0%, #FFFFFF 90%);
 	font-family: 'Ek Mukta';
 	font-weight: bold;
 	position: absolute;
-	width: 230px;
-	margin-left: 280px;
-	margin-top: 28px;
+	width: 240px;
+	margin-left: 380px;
+	margin-top: 75px;
 	/*background-color: yellow;*/
 	/* IE10 Consumer Preview */ 
 background-image: -ms-linear-gradient(bottom, #DBDBD3 0%, #FFFFFF 90%);
@@ -769,9 +769,9 @@ background-image: linear-gradient(to top, #DBDBD3 0%, #FFFFFF 90%);
 	font-weight: bold;
 	position: absolute;
 	
-	width: 190px;
-	margin-left: 550px;
-	margin-top: -220px;
+	width: 240px;
+	margin-left: 710px;
+	margin-top: -225px;
 	/*background-color: yellow;*/
 	/* IE10 Consumer Preview */ 
 background-image: -ms-linear-gradient(bottom, #DBDBD3 0%, #FFFFFF 90%);
@@ -813,9 +813,25 @@ background-image: linear-gradient(to top, #DBDBD3 0%, #FFFFFF 90%);
 	font-weight: bold;
 }
 
-.refref:hover
+#preko
+{
+	position: relative;
+	margin-top: -20px;
+	color: black;
+	width: 300px;
+	background-color: yellow;
+	opacity: 0.6;
+}
+
+#slikaRef:hover, #preko:hover
 {
 	opacity: 0.79;
+
+}
+
+.refref:hover
+{
+	opacity: 0.9;
 }
 .more > a 
 {
@@ -936,6 +952,18 @@ width: 290px;
 { width: 120px;}
 
 .tabela{overflow: scroll }
+
+.tabelaCont
+{
+	margin-top: 100px;
+	margin-left: 40px;
+	padding: 5px;
+
+}
+
+.tabelaCont > td {border:  1px solid yellow;}
+
+
 
 /*table, th, td
 {
@@ -1641,3 +1669,12 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 }
 
 /*dodavanje komentara na novost*/
+#slikaRef
+{
+	border: 1px solid yellow;
+	width: 300px;
+	height: 200px;
+
+}
+
+#n {margin-left: 45px; font-family: 'Ek Mukta'; color: gray;}
