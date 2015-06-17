@@ -14,7 +14,7 @@
 				<!--DIO ZA AJAX, treba izdvojiti-->
 
 				<div class = "photoNovost">
-					<img src="novosti.jpg" alt = "" width = "100%" height = "100%">
+					<img src="images/novosti.jpg" alt = "" width = "100%" height = "100%">
 				</div>
 				<!--<?php 
 					#include 'prikaziNovosti.php';

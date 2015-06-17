@@ -125,59 +125,83 @@
 					</div>
 
 				<?php else:?>
-					<?php 
-					#---AKO JE LOGOVAN---
-					#--provjeriti kojeg je tipa korisnik--
-					$bool = 1;
-					$veza = new PDO("mysql:dbname=wts;host=localhost", "wtadmin", "wtadmin");
-					$veza->exec("set names utf-8");
-					$korisnik = $veza->query("SELECT * from korisnik");
-					foreach ($korisnik as $k) 
+				<?php 
+				#---AKO JE LOGOVAN---
+				#---provjera kojeg je tipa korisnik---
+				$bool = 1;
+				$veza = new PDO("mysql:dbname=wts;host=localhost", "wtadmin", "wtadmin");
+				$veza->exec("set names utf-8");
+				$korisnik = $veza->query("SELECT * from korisnik");
+				foreach ($korisnik as $k) 
+				{
+					if($k['username'] === $_SESSION['username'])
 					{
-						if($k['username'] === $_SESSION['username'])
-						{
-							if($k['admin'] === "1")
-								$bool = 1;#znaci da je admin
-							else
-								$bool = 0;#znaci da je obicni korisnik
-						}
+						if($k['admin'] === "1")
+							$bool = 1;#znaci da je admin
+						else
+							$bool = 0;#znaci da je obicni korisnik
 					}
-					
-
-					echo "<p class = 'prijavaNaslov'>PRIJAVLJENI STE KAO : <i>".$_SESSION['username']."</i></p>"?>
-					<?php if($bool === 1):?>
-						
-						<div class = "operacije">
-							<form action = "panel.php" method = "post" class = "logoutForm">
-								<input class = "logButton" id = "logoutBtn"type = "submit" value = "logout" name ="logout">
-
-								<input class = "logButton" id = "addUserBtn"type = "submit" value = "Dodaj korisnika" name = "addUserBtn">
-								<input class = "logButton" id = "delUserBtn"type = "submit" value = "Obriši korisnika" name = "delUserBtn">
-
-								<input class = "logButton" id = "addNewsBtn"type = "submit" value = "Dodaj novost" name = "addNewsBtn">
-								<input class = "logButton" id = "delNewsBtn"type = "submit" value = "Obriši novost" name = "delNewsBtn">
-
-								<input class = "logButton" id = "addCommentBtn" type ="submit" value = "Dodaj komentar" name = "addCommentBtn">
-								<input class = "logButton" id = "delCommentBtn" type = "submit" value = "Obrši komentar" name = "delCommentBtn">
-
-							</form>
-						</div>
-
-					<?php else :?>
-
-						<p>njaa</p>
+				}
+				echo "<p class = 'prijavaNaslov'>PRIJAVLJENI STE KAO : <i>".$_SESSION['username']."</i></p>"?>
+				<?php if($bool === 1): ?>
+				
+					<div class = "operacije">
 						<form action = "panel.php" method = "post" class = "logoutForm">
 							<input class = "logButton" id = "logoutBtn"type = "submit" value = "logout" name ="logout">
-							<input class = "logButton" id = "addCommentBtn" type = "submit" value = "Dodaj komentar" name = "addCommentBtnKor">
-						</form>
 
-					<?php endif;?>	
+							<input class = "logButton" id = "addUserBtn"type = "submit" value = "Dodaj korisnika" name = "addUserBtn">
+							<input class = "logButton" id = "delUserBtn"type = "submit" value = "Obriši korisnika" name = "delUserBtn">
+
+							<input class = "logButton" id = "addNewsBtn"type = "submit" value = "Dodaj novost" name = "addNewsBtn">
+							<input class = "logButton" id = "delNewsBtn"type = "submit" value = "Obriši novost" name = "delNewsBtn">
+
+							<input class = "logButton" id = "addCommentBtn" type ="submit" value = "Dodaj komentar" name = "addCommentBtn">
+							<input class = "logButton" id = "delCommentBtn" type = "submit" value = "Obrši komentar" name = "delCommentBtn">
+
+						</form>
+					</div>
+				<?php else : ?>
+					<form action = "panel.php" method = "post" class = "logoutForm">
+						<input class = "logButton" id = "logoutBtn"type = "submit" value = "logout" name ="logout">
+						<input class = "logButton" id = "addCommentBtn" type = "submit" value = "Dodaj komentar" name = "addCommentBtnKor">
+					</form>
+				<?php endif;?>
 
 			<?php endif;?>
- 
+ 			
+ 			<div id = "onoZa"></div>
 			<?php if(isset($_SESSION['username'])): ?>
 
+				<?php 
+					if(isset($_POST['addUserBtn']) && isset($_POST['addUser']) && isset($_POST['inputUsername']) && isset($_POST['inputPassword'])){
+						#---znaci da je pritisnuo oba buttona---
+						
+						$username = htmlentities($_POST['inputUsername'], ENT_QUOTES);
+						$password = htmlentities($_POST['inputPassword'], ENT_QUOTES);
+						try
+						{
+							$veza = new PDO("mysql:dbname=wts;host=localhost", "wtadmin", "wtadmin");
+							$veza->exec("set names utf-8");
 
+							$sql = "INSERT INTO korisnik (username, password)
+									VALUES ('".$username."', '".$password."')";
+							$veza->exec($sql);
+							echo "OK";
+						}
+						catch(PDOException $e)
+						{
+							echo $sql . "<br>".$e->getMessage();
+						}
+
+
+					}
+					else
+					{	
+						//$username = htmlentities($_POST['inputUsername'], ENT_QUOTES);
+						//echo $username;
+						//echo "ne valja";
+					}
+				?>
 
 				<?php if(isset($_POST['addUserBtn'])) : ?>
 				<!--AKO JE ODABRANO DODAVANJE KORISNIKA-->
@@ -337,7 +361,7 @@
 						 echo "</div>";
 					?>
 				<?php endif;?>
-
+				
 				<?php if(isset($_POST['addCommentBtnKor'])): ?>
 					<?php
 					$veza = new PDO("mysql:dbname=wts;host=localhost", "wtadmin", "wtadmin");

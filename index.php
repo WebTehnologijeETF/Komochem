@@ -4,21 +4,21 @@
 		<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8">
 		<title>KOMOCHEM d.o.o. Visoko</title>
 		<link rel="stylesheet" type="text/css" href="stilTest.css">
+		<link rel="stylesheet" type="text/css" href="slideshow.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ek+Mukta">
 		<link href='http://fonts.googleapis.com/css?family=Hind:600' rel='stylesheet' type='text/css'>
 	</head>
 
 	<body onload = "ajaxPocetna();" id = "bodi">
 		<!--okvir-->
-
 		<div class = "okvir">
 			<!--gornji meni-->
 			<div class = "meni_gore">
 				<ul class = "meni">
-					<li class = "pocetna"><a href="#" onclick = "ajaxPocetna(); return false;">POČENTA</a></li>
+					<li class = "pocetna"><a href="#" onclick = "ajaxPocetna(); return false;">POČETNA</a></li>
 					<li class = "onama"><a href="#" onclick = "ajaxOnama();return false;">O NAMA</a></li>
 					<li class = "kontakt"><a href="#" onclick = "ajaxKontakt(); return false;">KONTAKT</a></li>
-					<li class = "kontakt"><a href="panelWebServis.php" >LOG IN</a></li>
+					<li class = "kontakt"><a href="panel.php" >LOG IN</a></li>
 
 				</ul>
 			</div>
@@ -64,25 +64,25 @@
 				<div>bbbb</div>-->
 				
 				<div class = "logo"> 
-					<img src = "logobez2.png" alt = "">
+					<img src = "images/logobez2.png" alt = "">
 				</div>
 				
 				<!--IKONE-->
 				<div class = "facebook">
 					<a href="https://www.facebook.com">
-						<img src="fejs.png" alt = "">
+						<img src="images/fejs.png" alt = "">
 					</a>
 				</div>
 
 				<div class = "twitter">
 					<a href="https://www.twitter.com">
-						<img src="tvit.png" alt = "">
+						<img src="images/tvit.png" alt = "">
 					</a>
 				</div>
 
 				<div class = "google">
 					<a href="https://www.google.com">
-						<img src="gugl.png" alt = "">
+						<img src="images/gugl.png" alt = "">
 					</a>
 				</div>
 				<!--END OF IKONE-->
@@ -117,10 +117,11 @@
 		 <!--END OF okvir-->	
 		</div>
 
-		<script src = "javaSkript.js"></script>
+		<script src = "scripts/javaSkript.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src = "ajaxTabela.js"></script>
-		<script src = "ajaxNovostiSql.js"></script>
+		<script src = "scripts/ajaxTabela.js"></script>
+		<script src = "scripts/ajaxNovostiSql.js"></script>
+		<script src = "scripts/slideshow.js"></script>
 		
 	</body>
 

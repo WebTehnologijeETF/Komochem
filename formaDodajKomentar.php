@@ -10,7 +10,7 @@
 
 				Autor : <input type = "text" id = "autorComment" name = "addComment" class = "unos" value = '.$_SESSION["username"].' disabled = true>
 				<br><br>
-				Email : <input type = "text" id = "emailAutora" class = "unos" value = "'.$_SESSION["username"].'@komochem.ba" disabled = true><br><br>
+				Email : <input type = "text" id = "emailAutora" class = "unos"><br><br>
 				Komentar : <textarea rows = "10" cols = "40" class = "tekstArea" id = "commentAdd" required = "required"></textarea>
 				<br><br>
 

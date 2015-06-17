@@ -18,9 +18,10 @@
 			<!--gornji meni-->
 			<div class = "meni_gore">
 				<ul class = "meni">
-					<li class = "pocetna"><a href="#" onclick = "ajaxPocetna(); return false;">POČENTA</a></li>
+					<li class = "pocetna"><a href="#" onclick = "ajaxPocetna(); ">POČENTA</a></li>
 					<li class = "onama"><a href="#" onclick = "ajaxOnama();return false;">O NAMA</a></li>
 					<li class = "kontakt"><a href="#" onclick = "ajaxKontakt(); return false;">KONTAKT</a></li>
+					<li class = "kontakt"><a href="panel.php" >LOG IN</a></li>
 				</ul>
 			</div>
 			<!--END OF meni_gore-->
@@ -65,25 +66,25 @@
 				<div>bbbb</div>-->
 				
 				<div class = "logo"> 
-					<img src = "logobez2.png" alt = "">
+					<img src = "images/logobez2.png" alt = "">
 				</div>
 				
 				<!--IKONE-->
 				<div class = "facebook">
 					<a href="https://www.facebook.com">
-						<img src="fejs.png" alt = "">
+						<img src="images/fejs.png" alt = "">
 					</a>
 				</div>
 
 				<div class = "twitter">
 					<a href="https://www.twitter.com">
-						<img src="tvit.png" alt = "">
+						<img src="images/tvit.png" alt = "">
 					</a>
 				</div>
 
 				<div class = "google">
 					<a href="https://www.google.com">
-						<img src="gugl.png" alt = "">
+						<img src="images/gugl.png" alt = "">
 					</a>
 				</div>
 				<!--END OF IKONE-->
@@ -115,6 +116,7 @@
 						<?php 
 							include $prikaziMiFormu;
 						?>
+
 					</div>
 					<div id = "formaDva">
 						<h4 class = "slova">Treća spirala - Servis</h4>
@@ -128,7 +130,7 @@
 		 <!--END OF okvir-->	
 		</div>
 
-		<script src = "javaSkript.js">
+		<script src = "scripts/javaSkript.js">
 		
 		
 		/*function ZatvoriMeni()
@@ -147,7 +149,7 @@
 		}*/
 		</script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src = "ajaxTabela.js"></script>
+		<script src = "scripts/ajaxTabela.js"></script>
 		
 	</body>
 
