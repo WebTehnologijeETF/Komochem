@@ -48,7 +48,7 @@
 							<li><a href="#" onclick = "ajaxRef(); return false;">Novosti</a></li>
 							<li><a href="#" onclick = "ajaxDown(); return false;">Proizvodi lista</a></li>
 							<!--<li><a href="#">Postanite prijatelj</a></li>-->
-							<li><a href = "#" onclick = "ajaxPrij(); return false;">Postanite prijatelj</a></li>
+							<li><a href = "#" onclick = "ajaxReference(); return false;">Reference</a></li>
 						</ul>
 					</div>
 				</div>
@@ -61,25 +61,25 @@
 				<div>bbbb</div>-->
 				
 				<div class = "logo"> 
-					<img src = "logobez2.png" alt = "">
+					<img src = "images/logobez2.png" alt = "">
 				</div>
 				
 				<!--IKONE-->
 				<div class = "facebook">
 					<a href="https://www.facebook.com">
-						<img src="fejs.png" alt = "">
+						<img src="images/fejs.png" alt = "">
 					</a>
 				</div>
 
 				<div class = "twitter">
 					<a href="https://www.twitter.com">
-						<img src="tvit.png" alt = "">
+						<img src="images/tvit.png" alt = "">
 					</a>
 				</div>
 
 				<div class = "google">
 					<a href="https://www.google.com">
-						<img src="gugl.png" alt = "">
+						<img src="images/gugl.png" alt = "">
 					</a>
 				</div>
 				<!--END OF IKONE-->
@@ -116,7 +116,7 @@
 		 <!--END OF okvir-->	
 		</div>
 
-		<script src = "javaSkript.js">
+		<script src = "scripts/javaSkript.js">
 		
 		
 		/*function ZatvoriMeni()
@@ -135,8 +135,8 @@
 		}*/
 		</script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src = "ajaxTabela.js"></script>
-		<script src = "ajaxNovostiSql.js"></script>
+		<script src = "scripts/ajaxTabela.js"></script>
+		<script src = "scripts/ajaxNovostiSql.js"></script>
 		
 	</body>
 

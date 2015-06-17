@@ -380,7 +380,7 @@ background-image: linear-gradient(to top, #EBEBEB 0%, #FFFFFF 100%);
 	border-width: 1px;
 	border-color: yellow;
 	width: 260px;
-	height: 80px;
+	height: 100px;
 	margin-top: 10px;
 	margin-left: 20px;
 
@@ -598,6 +598,18 @@ background-image: linear-gradient(to top, #DBDBD3 0%, #FFFFFF 90%);
 	height: 390px;
 	word-spacing: 5px;
 	padding: 5px 5px;
+}
+
+.partneriDole
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: yellow;
+	width: 310px;
+	height: 200px;
+	padding: 5px 5px;
+	left: 5px;
+	position: relative;
 }
 
 .onamatekst
@@ -1678,3 +1690,30 @@ background-image: linear-gradient(to top, #D5D6C9 0%, #FFFFFF 60%);
 }
 
 #n {margin-left: 45px; font-family: 'Ek Mukta'; color: gray;}
+#penny 
+{
+	width: 200px;
+	height: 120px;
+	margin-left: 400px;
+	margin-top: -115px;
+}
+
+#fis
+{
+	width: 220px;
+	height: 120px;
+	margin-left: 730px;
+	margin-top: -70px;
+}
+
+/*#bodi {background-image: url(images/arr5.jpg); }*/
+
+
+
+#igm
+{
+	width: 220px;
+	height: 120px;
+	margin-left: 60px;
+	margin-top: 10px;
+}

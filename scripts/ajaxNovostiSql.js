@@ -23,7 +23,7 @@ function DetaljnaNovost (novostID)
 
 function DetaljnaKomentar (novostID)
 {
-	alert("uso");
+	
 	var ajax = new XMLHttpRequest();
 	ajax.onreadystatechange = function()
 	{//anonimna

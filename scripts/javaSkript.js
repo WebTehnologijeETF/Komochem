@@ -615,7 +615,7 @@ function ajaxPocetna()
 			document.getElementById("onoZaAjax").innerHTML = ajax.responseText;
 		}
 	}
-	ajax.open("GET", "pocetna.html", true);
+	ajax.open("GET", "pocetna.php", true);
 	ajax.send();
 }
 
@@ -795,7 +795,7 @@ function ajaxSavjet()
 			//document.getElementById("slikaLjepila").style.zIndex = "-1";
 		}
 	}
-	ajax.open("GET", "ajaxSavjeti.html", true);
+	ajax.open("GET", "ajaxSavjeti.php", true);
 
 	ajax.send();
 }

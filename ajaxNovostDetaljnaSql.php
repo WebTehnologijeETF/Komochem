@@ -9,7 +9,7 @@
 
 	<body>
 		<div id = "slikaLogin2">
-			<img src="loginPhoto.jpg" alt = "" height = "100%" width = "100%">
+			<img src="images/loginPhoto.jpg" alt = "" height = "100%" width = "100%">
 		</div>
 
 		<div class =  "detaljnaNovost" id = "detaljnaNovost">

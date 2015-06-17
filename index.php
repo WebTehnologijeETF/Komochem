@@ -117,6 +117,8 @@
 		 <!--END OF okvir-->	
 		</div>
 
+	
+
 		<script src = "scripts/javaSkript.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src = "scripts/ajaxTabela.js"></script>
@@ -124,5 +126,7 @@
 		<script src = "scripts/slideshow.js"></script>
 		
 	</body>
+
+
 
 </html>
